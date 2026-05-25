@@ -1,0 +1,28 @@
+# Xcode
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+*.xcworkspace/xcshareddata/swpm/
+DerivedData/
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Firebase
+GoogleService-Info.plist
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+database-debug.log
+
+# Node / Cloud Functions
+functions/node_modules/
+functions/lib/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# SPM
+.swiftpm/

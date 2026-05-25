@@ -1,0 +1,30 @@
+{
+  "rules": {
+    "rooms": {
+      "$roomId": {
+        ".read": "auth != null",
+        ".write": "auth != null",
+
+        "players": {
+          "$playerId": {
+            ".write": "auth != null && (auth.uid == $playerId || data.parent().parent().child('hostId').val() == auth.uid)"
+          }
+        },
+
+        "categories": {
+          ".write": "auth != null && data.parent().child('hostId').val() == auth.uid"
+        },
+
+        "takes": {
+          "$round": {
+            "$takeId": {
+              "playerId": {
+                ".read": "auth != null && (data.parent().parent().parent().parent().child('phase').val() == 'revealing' || data.parent().parent().parent().parent().child('phase').val() == 'round_leaderboard' || data.parent().parent().parent().parent().child('phase').val() == 'final_leaderboard')"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
