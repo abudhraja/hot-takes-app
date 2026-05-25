@@ -138,7 +138,7 @@ hot-takes-game/
     │
     └── Assets.xcassets/
         └── AppIcon.appiconset/
-            └── AppIcon-1024.png   # 🔥 on navy-purple gradient, hot-pink "HOT TAKES" text
+            └── AppIcon-1024.png   # H🔥T monogram on navy-purple gradient (fire doubles as the "O")
 ```
 
 ---
